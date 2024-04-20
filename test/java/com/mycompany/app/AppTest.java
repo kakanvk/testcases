@@ -10,26 +10,24 @@ public class AppTest {
         int total = 0;
 
         // Test cases for prime numbers
-        total += 8; // Number of prime numbers being tested
+        int[] primeNumbers = {2, 3, 5, 7, 11, 7919, 1257787, 3021377};
+        total += primeNumbers.length;
 
-        if (App.isPrime(2)) accepted++;
-        if (App.isPrime(3)) accepted++;
-        if (App.isPrime(5)) accepted++;
-        if (App.isPrime(7)) accepted++;
-        if (App.isPrime(11)) accepted++;
-        if (App.isPrime(7919)) accepted++;
-        if (App.isPrime(1257787)) accepted++;
-        if (App.isPrime(3021377)) accepted++;
+        for (int number : primeNumbers) {
+            if (App.isPrime(number)) {
+                accepted++;
+            }
+        }
 
         // Test cases for non-prime numbers
-        total += 6; // Number of non-prime numbers being tested
+        int[] nonPrimeNumbers = {4, 6, 8, 9, 10, 12, 11};
+        total += nonPrimeNumbers.length;
 
-        if (!App.isPrime(4)) accepted++;
-        if (!App.isPrime(6)) accepted++;
-        if (!App.isPrime(8)) accepted++;
-        if (!App.isPrime(9)) accepted++;
-        if (!App.isPrime(10)) accepted++;
-        if (!App.isPrime(12)) accepted++;
+        for (int number : nonPrimeNumbers) {
+            if (!App.isPrime(number)) {
+                accepted++;
+            }
+        }
 
         System.out.println("Accepted: " + accepted + "/" + total);
     }
