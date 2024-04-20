@@ -10,7 +10,7 @@ public class AppTest {
         int total = 0;
 
         // Test cases for prime numbers
-        total += 7; // Number of prime numbers being tested
+        total += 8; // Number of prime numbers being tested
 
         if (App.isPrime(2)) accepted++;
         if (App.isPrime(3)) accepted++;
