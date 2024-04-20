@@ -20,7 +20,7 @@ public class AppTest {
         }
 
         // Test cases for non-prime numbers
-        int[] nonPrimeNumbers = {4, 6, 8, 9, 10, 12, 11};
+        int[] nonPrimeNumbers = {4, 6, 8, 9, 10, 12};
         total += nonPrimeNumbers.length;
 
         for (int number : nonPrimeNumbers) {
